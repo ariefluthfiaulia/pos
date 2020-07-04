@@ -1,0 +1,10 @@
+[
+  {
+    "username": "admin",
+    "password": "Pass1234",
+    "name": "Yuda",
+    "genderId": 1,
+    "userRoleId": 1,
+    "phoneNumber": "085717374620"
+  }
+]

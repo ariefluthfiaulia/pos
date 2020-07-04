@@ -1,0 +1,11 @@
+.card-info{
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+  width: 500px;
+  vertical-align:middle;
+}
+
+.mt-8, .my-8 {
+  margin-top: 8rem !important;
+}

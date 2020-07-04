@@ -21,7 +21,9 @@ namespace POS.WebApp.Data
         [ForeignKey("UserRoleId")]
         public UserRole UserRole { get; set; }
         public int UserRoleId { get; set; }
-        public bool Gender { get; set; }
+        [ForeignKey("GenderId")]
+        public Gender Gender { get; set; }
+        public short GenderId { get; set; }
         [StringLength(30)]
         public string PhoneNumber { get; set; }
         [StringLength(30)]

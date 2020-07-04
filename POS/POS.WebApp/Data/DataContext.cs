@@ -11,6 +11,7 @@ namespace POS.WebApp.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }
+        public DbSet<Gender> Gender { get; set; }
         public DbSet<Item> Item { get; set; }
         public DbSet<ItemCategory> ItemCategory { get; set; }
         public DbSet<TransactionHeader> TransactionHeader { get; set; }
