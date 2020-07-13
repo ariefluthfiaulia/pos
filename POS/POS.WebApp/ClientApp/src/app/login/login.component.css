@@ -6,6 +6,11 @@
   vertical-align:middle;
 }
 
+.card-header
+{
+    text-align: center;
+}
+
 .mt-8, .my-8 {
   margin-top: 8rem !important;
 }
