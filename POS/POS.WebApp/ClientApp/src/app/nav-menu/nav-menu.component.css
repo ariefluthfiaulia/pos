@@ -8,7 +8,7 @@ a.nav-link:hover {
   color: #fff;
 }
 
-.dropdown-toggle, .dropdown-item {
+.dropdown-toggle, .dropdown-item, a.nav-link {
   cursor: pointer;
 }
 

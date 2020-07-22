@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav-menu.component.css']
 })
 export class NavMenuComponent implements OnInit {
-  isCollapsed = false;
+  isCollapsed = true;
   model: any = {};
 
   constructor(public authService: AuthService, private alertify: AlertifyService, private router: Router) { }

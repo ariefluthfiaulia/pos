@@ -14,11 +14,11 @@
         </thead>
         <tbody>
           <tr *ngFor="let user of users">
-            <td>{{ user.username }}</td>
-            <td>{{ user.name }}</td>
-            <td>{{ user.userRole }}</td>
-            <td>{{ user.gender }}</td>
-            <td>{{ user.phoneNumber }}</td>
+            <td>{{ user.username | uppercase }}</td>
+            <td>{{ user.name | uppercase}}</td>
+            <td>{{ user.userRole | uppercase }}</td>
+            <td>{{ user.gender | uppercase }}</td>
+            <td>{{ user.phoneNumber | uppercase }}</td>
           </tr>
         </tbody>
       </table>
