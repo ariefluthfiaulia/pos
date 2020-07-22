@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { BsDropdownModule } from 'ngx-bootstrap';
+import { BsDropdownModule, CollapseModule } from 'ngx-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -18,6 +19,9 @@ import { AuthGuard } from './_guard/auth.guard';
 import { AlertifyService } from './_service/alertify.service';
 import { ErrorInterCeptorProvider } from './_service/error.interceptor';
 import { LoginComponent } from './login/login.component';
+import { ProductComponent } from './product/product.component';
+import { UserResolver } from './_resolvers/user/user.resolver';
+import { UserComponent } from './user/user.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -38,12 +42,16 @@ export class CustomHammerConfig extends HammerGestureConfig {
     HomeComponent,
     LoginComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    ProductComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
+    CollapseModule.forRoot(),
     BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     JwtModule.forRoot({
@@ -59,6 +67,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
     AuthService,
     AuthGuard,
     AlertifyService,
+    UserResolver,
     ErrorInterCeptorProvider,
     { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
   ],

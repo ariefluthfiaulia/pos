@@ -15,9 +15,9 @@ namespace POS.WebApp.Data
         [ForeignKey("TransactionHeaderId")]
         public TransactionHeader TransactionHeader { get; set; }
         public int TransactionHeaderId { get; set; }
-        [ForeignKey("ItemId")]
-        public Item Item { get; set; }
-        public int ItemId { get; set; }
+        [ForeignKey("ProductId")]
+        public Product Product { get; set; }
+        public int ProductId { get; set; }
         public int Quantity { get; set; }
         public string CreatedBy { get; set; }
         public DateTimeOffset CreatedAt { get; set; }

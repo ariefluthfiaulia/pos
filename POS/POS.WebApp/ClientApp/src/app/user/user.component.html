@@ -1,0 +1,28 @@
+<div class="container-fluid mt-custom">
+  <div class="row">
+    <h1 class="h2 mb-2 text-gray-800">User</h1>
+    <div class="table-responsive">
+      <table class='table table-bordered' aria-labelledby="tableLabel">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Nama</th>
+            <th>Role</th>
+            <th>Gender</th>
+            <th>Telp/Hp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.username }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.userRole }}</td>
+            <td>{{ user.gender }}</td>
+            <td>{{ user.phoneNumber }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

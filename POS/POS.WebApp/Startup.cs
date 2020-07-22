@@ -11,6 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 using POS.WebApp.Data;
 using POS.WebApp.Repo;
 using System;
+using AutoMapper;
 
 namespace POS.WebApp
 {
@@ -40,9 +41,10 @@ namespace POS.WebApp
             });
             services.AddControllers().AddNewtonsoftJson();
             services.AddCors();
-            //services.AddAutoMapper(typeof(DatingRepository).Assembly);
+            services.AddAutoMapper(typeof(ProductRepository).Assembly);
             services.AddScoped<IAuthRepository, AuthRepository>();
-            //services.AddScoped<IDatingRepository, DatingRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {

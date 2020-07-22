@@ -38,15 +38,15 @@ namespace POS.WebApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
                     b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("varchar(30) CHARACTER SET utf8mb4")
                         .HasMaxLength(30);
+
+                    b.Property<int>("ItemCategoryId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .HasColumnType("varchar(30) CHARACTER SET utf8mb4")
@@ -70,7 +70,7 @@ namespace POS.WebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
+                    b.HasIndex("ItemCategoryId");
 
                     b.HasIndex("UnitId");
 
@@ -257,7 +257,7 @@ namespace POS.WebApp.Migrations
                 {
                     b.HasOne("POS.WebApp.Data.ItemCategory", "ItemCategory")
                         .WithMany("Item")
-                        .HasForeignKey("CategoryId")
+                        .HasForeignKey("ItemCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

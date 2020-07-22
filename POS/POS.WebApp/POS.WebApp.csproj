@@ -39,7 +39,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\app\_resolvers\" />
+    <Content Include="ClientApp\node_modules\bootstrap\dist\css\sb-admin-2.css" />
+    <Content Include="ClientApp\node_modules\bootstrap\dist\css\sb-admin-2.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\app\_models\product\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-@import '../node_modules/bootswatch/dist/united/bootstrap.min.css';
+@import '../node_modules/bootstrap/dist/css/sb-admin-2.min.css';
+@import 'vendor/fontawesome-free/css/all.min.css';
+/*@import '../node_modules/bootswatch/dist/united/bootstrap.min.css';*/
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 @import '../node_modules/alertifyjs/build/css/alertify.min.css';
 @import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
-
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
@@ -24,4 +24,16 @@ code {
   background-color: rgb(51, 102, 153)
 }
 
+thead {
+  background-color: #a3c2c2;
+}
 
+.mt-custom {
+  padding-left: 17rem;
+  padding-right: 3rem;
+}
+
+th {
+  background-color: lightgray;
+  color: #5a5c69 !important;
+}
